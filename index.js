@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.slide-tracks .certificate-slides');
     const totalImages = images.length;
     const slideWidth = images[0].clientWidth;
+    console.log("the slide width is =>  "+slideWidth);
     const imagesPerSlide = 3;
 
     function updatePosition() {
@@ -82,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     window.nextSlide = function() {
-        if (currentIndexPosition < totalImages - imagesPerSlide) {
+        if (currentIndexPosition < totalImages - 1) {
             currentIndexPosition++;
         } else {
             currentIndexPosition = 0;
